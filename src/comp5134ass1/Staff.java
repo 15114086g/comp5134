@@ -48,7 +48,7 @@ public class Staff implements CommandHandler {
 	
 	public void addObserver(Observer o){
 		this.listners=o;
-		System.out.println("oo");
+		
 	}
 	
 }

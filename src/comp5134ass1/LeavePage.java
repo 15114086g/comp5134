@@ -69,7 +69,7 @@ public class LeavePage extends JFrame{
     				
             		}
             		else{
-            		System.out.println("yo");
+            		
             		LeaveApplication newLeave=new LeaveApplication(staff, toDate(sDate),toDate(eDate), "pending");
             		
             		leaveList.add(newLeave);
@@ -81,7 +81,11 @@ public class LeavePage extends JFrame{
             		
             		
             		}
-            	}
+            		
+            	} else{
+        			JOptionPane.showMessageDialog(LeavePage.this, "Invalid date.");
+            		
+        		}
             	
             	
             }
@@ -102,6 +106,7 @@ public class LeavePage extends JFrame{
 	    try {
 	      dateFormat.parse(inDate.trim());
 	    } catch (ParseException pe) {
+	    	
 	      return false;
 	    }
 	    return true;
